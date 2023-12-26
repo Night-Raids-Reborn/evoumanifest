@@ -10,10 +10,10 @@ Evolution X
 ```bash
 
 # Initialize local repository
-repo init -u https://github.com/Evolution-X/manifest -b udc
+repo init -q --no-repo-verify --depth=1 -u https://github.com/Night-Raids-Reborn/evoumanifest -b udc -g default,-mips,-darwin,-notdefault
 
 # Sync
-repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all)
 ```
 
 ### Build ###
